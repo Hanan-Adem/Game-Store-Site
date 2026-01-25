@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  <link rel="stylesheet" href="/Css/Games.css">
+  <link rel="stylesheet" href="/Css/main.css">
+
+  <title>All Games - Game Store</title>
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+      <!-- LEFT -->
+      <div class="nav-left">
+        <img src="/image/Logo.png" class="logo" />
+
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search store" />
+        </div>
+      </div>
+
+      <!-- CENTER -->
+      <ul class="nav-links">
+        <li><a href="/Html/Home.html">Home</a></li>
+        <li><a href="/Html/Games.html"  class="active">Games</a></li>
+        <li><a href="/Html/News.html">News</a></li>
+        <li><a href="/Html/About.html">About</a></li>
+      </ul>
+
+      <!-- RIGHT -->
+      <div class="icons">
+        <a href="/Html/Cart.html">
+          <img src="/image/Cart Icon.png" />
+        </a>
+        <a href="/Html/Login.html">
+          <img src="/image/Profile Icon.png" />
+        </a>
+      </div>
+
+      <!-- HAMBURGER -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- ================= MOBILE MENU ================= -->
+
+
+
+
+<main class="games-main">
+  <h1 style="margin:50px; color:white;">All Games</h1>
+  <div class="top-filters">
+  <div class="filter-group">
+    <label>Category</label>
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="Action">Action</option>
+      <option value="RPG">RPG</option>
+      <option value="Horror">Horror</option>
+      <option value="Shooter">Shooter</option>
+    </select>
+  </div>
+
+  <div class="filter-group">
+    <label>Max Price ($)</label>
+    <input type="number" id="priceFilter" placeholder="60">
+  </div>
+
+  <button class="apply-filter">Apply</button>
+</div>
+
+  <div class="games-grid" id="gamesGrid"></div>
+<!-- footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div>
+          <img src="/image/Logo.png" class="logo" />
+          <p>
+            GameVerse – Where every gamer levels up! From epic AAA adventures to
+            indie gems.
+          </p>
+        </div>
+
+        <div class="line"></div>
+
+        <div>
+          <h4>My Account</h4>
+          <a href="#">My Account</a>
+          <a href="#">My Orders</a>
+        </div>
+
+        <div>
+          <h4>Support</h4>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+
+        <!-- SOCIAL ICONS -->
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="#" aria-label="X / Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="#" aria-label="Discord">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+        </div>
+      </div>
+
+      <hr />
+      <p class="copy">© 2026 GameVerse. All rights reserved.</p>
+    </footer>
+<!-- End of footer -->
+
+
+
+  <!-- Modal -->
+  <div id="games-modal" class="games-modal">
+    <div class="games-modal-content">
+      <span class="games-close" id="games-close">&times;</span>
+      <div class="games-modal-body">
+        <img id="games-img" src="" alt="Game">
+        <div class="games-modal-info">
+          <h2 id="games-title"></h2>
+          <p id="games-desc"></p>
+          <iframe id="games-video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/Js/Games.js"></script>
+<script src="/Js/main.js"></script>
+<script src="Cart.html"></script>
+</body>
+</html>
